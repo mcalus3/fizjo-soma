@@ -1,0 +1,193 @@
+{
+  "navigation": {
+    "brand": "FizjoMed",
+    "links": [
+      { "text": "Strona główna", "href": "#" },
+      { "text": "Usługi", "href": "#" },
+      { "text": "O nas", "href": "#" },
+      { "text": "Zespół", "href": "#" },
+      { "text": "Cennik", "href": "#" }
+    ],
+    "contactButton": "Kontakt"
+  },
+  "hero": {
+    "title": "Profesjonalna fizjoterapia dla Twojego zdrowia",
+    "subtitle": "Zadbaj o swoje ciało z najlepszymi specjalistami",
+    "buttonText": "Umów wizytę"
+  },
+  "stats": [
+    { "number": "10+", "text": "lat doświadczenia" },
+    { "number": "98%", "text": "zadowolonych pacjentów" },
+    { "number": "15+", "text": "wykwalifikowanych specjalistów" },
+    { "number": "5000+", "text": "udanych terapii" }
+  ],
+  "team": {
+    "sectionLabel": "Nasi specjaliści",
+    "sectionTitle": "Poznaj nasz zespół",
+    "members": [
+      {
+        "name": "Dr Anna Kowalska",
+        "title": "Główny fizjoterapeuta, Specjalista rehabilitacji ortopedycznej",
+        "bio": "Dr Anna Kowalska posiada ponad 15 lat doświadczenia w fizjoterapii. Specjalizuje się w rehabilitacji ortopedycznej i sportowej. Ukończyła Akademię Wychowania Fizycznego w Warszawie oraz liczne kursy specjalistyczne z zakresu terapii manualnej i rehabilitacji. Jej podejście do pacjenta opiera się na holistycznej ocenie i indywidualnym planie terapii.",
+        "image": "team/1.jpg",
+        "imageAlt": "Dr Anna Kowalska",
+        "linkText": "Dowiedz się więcej",
+        "linkHref": "/o-nas"
+      },
+      {
+        "name": "Mgr Piotr Nowak",
+        "title": "Fizjoterapeuta, Specjalista terapii manualnej",
+        "bio": "Mgr Piotr Nowak jest absolwentem Uniwersytetu Medycznego w Poznaniu. Specjalizuje się w terapii manualnej i rehabilitacji neurologicznej. Regularnie poszerza swoją wiedzę uczestnicząc w międzynarodowych konferencjach i szkoleniach. Jego pasją jest pomaganie pacjentom w powrocie do pełnej sprawności po urazach i operacjach.",
+        "image": "team/2.jpg",
+        "imageAlt": "Mgr Piotr Nowak",
+        "linkText": "Dowiedz się więcej",
+        "linkHref": "/o-nas"
+      }
+    ]
+  },
+  "specializations": {
+    "sectionTitle": "Nasze specjalizacje",
+    "items": [
+      { "icon": "🦵", "title": "Rehabilitacja ortopedyczna" },
+      { "icon": "🧠", "title": "Rehabilitacja neurologiczna" },
+      { "icon": "🏊", "title": "Rehabilitacja sportowa" },
+      { "icon": "👶", "title": "Fizjoterapia dziecięca" },
+      { "icon": "🤰", "title": "Fizjoterapia kobiet w ciąży" },
+      { "icon": "🦴", "title": "Terapia kręgosłupa" },
+      { "icon": "🧘", "title": "Terapia powięziowa" },
+      { "icon": "🚶", "title": "Nauka prawidłowego chodu" }
+    ]
+  },
+  "testimonials": {
+    "sectionTitle": "Co mówią nasi pacjenci",
+    "items": [
+      {
+        "name": "Anna Kowalska",
+        "role": "Pacjentka z bólem kręgosłupa",
+        "content": "Dzięki terapii w FizjoMed mój ból kręgosłupa znacznie się zmniejszył. Profesjonalne podejście i indywidualny plan terapii przyniosły efekty już po kilku wizytach.",
+        "rating": 5
+      },
+      {
+        "name": "Jan Nowak",
+        "role": "Sportowiec po kontuzji",
+        "content": "Po kontuzji kolana myślałem, że nie wrócę już do sportu. Dzięki rehabilitacji w FizjoMed wróciłem do pełnej sprawności i znów mogę trenować bez bólu.",
+        "rating": 5
+      },
+      {
+        "name": "Maria Wiśniewska",
+        "role": "Pacjentka z rwą kulszową",
+        "content": "Cierpiałam na rwę kulszową przez wiele miesięcy. Terapeuci z FizjoMed nie tylko pomogli mi pozbyć się bólu, ale też nauczyli mnie ćwiczeń, które zapobiegają nawrotom.",
+        "rating": 5
+      }
+    ]
+  },
+  "pricing": {
+    "sectionTitle": "Cennik usług",
+    "plans": [
+      {
+        "title": "Konsultacja fizjoterapeutyczna",
+        "price": "150 zł",
+        "features": [
+          "Wywiad z pacjentem",
+          "Ocena funkcjonalna",
+          "Plan terapii",
+          "Czas trwania: 45 min"
+        ],
+        "buttonText": "Zarezerwuj"
+      },
+      {
+        "title": "Terapia manualna",
+        "price": "180 zł",
+        "features": [
+          "Indywidualna terapia",
+          "Techniki manualne",
+          "Ćwiczenia korekcyjne",
+          "Czas trwania: 60 min"
+        ],
+        "buttonText": "Zarezerwuj"
+      },
+      {
+        "title": "Masaż leczniczy",
+        "price": "120 zł",
+        "features": [
+          "Masaż wybranej okolicy",
+          "Techniki rozluźniające",
+          "Elementy terapii powięziowej",
+          "Czas trwania: 30 min"
+        ],
+        "buttonText": "Zarezerwuj"
+      },
+      {
+        "title": "Pakiet 5 zabiegów",
+        "price": "700 zł",
+        "features": [
+          "Oszczędność 150 zł",
+          "Indywidualny plan terapii",
+          "Konsultacja kontrolna",
+          "Materiały edukacyjne"
+        ],
+        "buttonText": "Zarezerwuj"
+      }
+    ]
+  },
+  "contact": {
+    "sectionTitle": "Umów się na wizytę już dziś!",
+    "form": {
+      "namePlaceholder": "Imię i nazwisko",
+      "phonePlaceholder": "Telefon",
+      "emailPlaceholder": "Email",
+      "datePlaceholder": "Preferowana data",
+      "timePlaceholder": "Preferowana godzina",
+      "detailsPlaceholder": "Opisz swój problem",
+      "privacyLabel": "Wyrażam zgodę na przetwarzanie moich danych osobowych zgodnie z polityką prywatności",
+      "submitButton": "UMÓW WIZYTĘ",
+      "submittingButton": "Wysyłanie...",
+      "successTitle": "Sukces!",
+      "successMessage": "Twoja wiadomość została wysłana. Skontaktujemy się z Tobą wkrótce."
+    },
+    "image": "contact/3.jpg",
+    "imageAlt": "Kontakt"
+  },
+  "footer": {
+    "brand": {
+      "name": "FizjoMed",
+      "tagline": "Profesjonalna fizjoterapia"
+    },
+    "sections": [
+      {
+        "title": "O nas",
+        "links": [
+          { "text": "Nasz zespół", "href": "#" },
+          { "text": "Historia", "href": "#" },
+          { "text": "Polityka prywatności", "href": "#" },
+          { "text": "Regulamin", "href": "#" }
+        ]
+      },
+      {
+        "title": "Usługi",
+        "links": [
+          { "text": "Fizjoterapia ortopedyczna", "href": "#" },
+          { "text": "Fizjoterapia neurologiczna", "href": "#" },
+          { "text": "Masaż leczniczy", "href": "#" },
+          { "text": "Rehabilitacja sportowa", "href": "#" }
+        ]
+      },
+      {
+        "title": "Kontakt",
+        "items": [
+          "ul. Zdrowotna 15, Warszawa",
+          "+48 123 456 789",
+          "kontakt@fizjomed.pl",
+          "Pon-Pt: 8:00-20:00, Sob: 9:00-14:00"
+        ]
+      }
+    ],
+    "copyright": "© 2025 FizjoMed. Wszelkie prawa zastrzeżone."
+  },
+  "images": {
+    "hero": {
+      "src": "hero/4.jpg",
+      "alt": "Fizjoterapia"
+    }
+  }
+}
