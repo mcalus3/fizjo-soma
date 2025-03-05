@@ -2,11 +2,9 @@
   "navigation": {
     "brand": "FizjoMed",
     "links": [
-      { "text": "Strona główna", "href": "#" },
-      { "text": "Usługi", "href": "#" },
-      { "text": "O nas", "href": "#" },
-      { "text": "Zespół", "href": "#" },
-      { "text": "Cennik", "href": "#" }
+      { "text": "Strona główna", "href": "/" },
+      { "text": "Zespół", "href": "/zespol" },
+      { "text": "Usługi", "href": "/uslugi" }
     ],
     "contactButton": "Kontakt"
   },
@@ -16,10 +14,10 @@
     "buttonText": "Umów wizytę"
   },
   "stats": [
-    { "number": "10+", "text": "lat doświadczenia" },
-    { "number": "98%", "text": "zadowolonych pacjentów" },
-    { "number": "15+", "text": "wykwalifikowanych specjalistów" },
-    { "number": "5000+", "text": "udanych terapii" }
+    { "number": "10", "suffix": "+", "text": "lat doświadczenia" },
+    { "number": "98", "suffix": "%", "text": "zadowolonych pacjentów" },
+    { "number": "15", "suffix": "+", "text": "wykwalifikowanych specjalistów" },
+    { "number": "5000", "suffix": "+", "text": "udanych terapii" }
   ],
   "team": {
     "sectionLabel": "Nasi specjaliści",

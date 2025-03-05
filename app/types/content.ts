@@ -52,6 +52,7 @@ export interface ContentStructure {
   stats: Array<{
     number: string
     text: string
+    suffix: string
   }>
   team: {
     sectionLabel: string

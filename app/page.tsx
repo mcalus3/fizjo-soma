@@ -22,6 +22,9 @@ import {
 import { useContent } from "./hooks/useContent";
 import { ImageComponent } from "./components/image-component";
 import { useToast } from "@/hooks/use-toast";
+import { KontaktLink } from "./components/Navigation";
+import { usePathname } from "next/navigation";
+import CountUp from "react-countup";
 
 export default function Home() {
   const { content } = useContent("pl");
@@ -29,6 +32,7 @@ export default function Home() {
   const [dialogOpen, setDialogOpen] = useState(false);
   const [dialogMessage, setDialogMessage] = useState("");
   const { toast } = useToast();
+  const pathname = usePathname();
 
   const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
@@ -88,27 +92,6 @@ export default function Home() {
 
   return (
     <div className="min-h-screen">
-      {/* Navigation */}
-      <nav className="border-b sticky top-0 bg-white/80 backdrop-blur-sm z-50">
-        <div className="container mx-auto px-4 py-4 flex items-center justify-between">
-          <div className="flex items-center">
-            <div className="font-bold text-xl text-blue-600">
-              {content.navigation.brand}
-            </div>
-          </div>
-          <div className="hidden md:flex items-center space-x-8">
-            {content.navigation.links.map((link, index) => (
-              <a key={index} href={link.href} className="text-sm font-medium">
-                {link.text}
-              </a>
-            ))}
-            <Button variant="outline">
-              {content.navigation.contactButton}
-            </Button>
-          </div>
-        </div>
-      </nav>
-
       {/* Hero Section */}
       <section className="relative h-[80vh] flex items-center">
         {/* Background Image */}
@@ -131,12 +114,11 @@ export default function Home() {
               {content.hero.title}
             </h1>
             <p className="text-xl mb-8">{content.hero.subtitle}</p>
-            <Button
-              size="lg"
-              className="bg-white text-blue-600 hover:bg-blue-50 font-bold px-8 py-6 text-lg shadow-md"
-            >
-              {content.hero.buttonText}
-            </Button>
+            <KontaktLink
+              pathname={pathname}
+              content={content.hero.buttonText}
+              className="bg-white text-primary font-bold px-8 py-4 text-lg shadow-md border border-input bg-background hover:bg-accent hover:text-accent-foreground rounded-xl"
+            />
           </div>
         </div>
       </section>
@@ -147,9 +129,21 @@ export default function Home() {
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
             {content.stats.map((stat, index) => (
               <div key={index}>
-                <Card className="bg-blue-600 text-white">
+                <Card className="bg-primary text-white">
                   <CardContent className="p-6 text-center">
-                    <div className="text-4xl font-bold">{stat.number}</div>
+                    <div className="text-4xl font-bold">
+                      <CountUp
+                        end={Number(stat.number)}
+                        suffix={stat.suffix}
+                        duration={2.5}
+                        separator=" "
+                        decimal=","
+                        decimals={stat.number.toString().includes(".") ? 1 : 0}
+                        enableScrollSpy={true}
+                        scrollSpyOnce={true}
+                        scrollSpyDelay={100}
+                      />
+                    </div>
                     <div className="text-sm mt-2">{stat.text}</div>
                   </CardContent>
                 </Card>
@@ -162,18 +156,19 @@ export default function Home() {
       {/* Team Section */}
       <section className="py-16 bg-gray-50">
         <div className="container mx-auto px-4">
-          <p className="text-center text-sm text-blue-600 mb-2">
+          <h2 className="text-3xl font-bold text-center mb-2">
             {content.team.sectionLabel}
-          </p>
-          <h2 className="text-3xl font-bold text-center mb-12">
-            {content.team.sectionTitle}
           </h2>
-
-          <div className="space-y-12">
+          <p className="text-center text-sm text-primary mb-12">
+            {content.team.sectionTitle}
+          </p>
+          <div className="flex flex-col gap-12">
             {content.team.members.map((member, index) => (
               <Card
                 key={index}
-                className="w-full overflow-hidden border-0 shadow-lg"
+                className={`w-full max-w-4xl overflow-hidden border-0 shadow-lg ${
+                  index % 2 === 1 ? "self-end" : ""
+                }`}
               >
                 <div
                   className={`flex flex-col ${
@@ -189,17 +184,17 @@ export default function Home() {
                     />
                   </div>
                   <CardContent className="md:w-2/3 p-8">
-                    <h3 className="text-2xl font-bold text-navy-blue mb-2">
+                    <h3 className="text-2xl font-bold text-primary mb-2">
                       {member.name}
                     </h3>
-                    <p className="text-blue-600 font-medium mb-4">
+                    <p className="text-primary font-medium mb-4">
                       {member.title}
                     </p>
                     <p className="text-gray-600 mb-6">{member.bio}</p>
                     <div className="mt-4">
                       <Link
                         href={member.linkHref}
-                        className="inline-flex items-center text-blue-600 font-medium hover:underline"
+                        className="inline-flex items-center text-primary font-medium hover:underline"
                       >
                         {member.linkText} <span className="ml-1">→</span>
                       </Link>
@@ -222,10 +217,10 @@ export default function Home() {
             {content.specializations.items.map((item, index) => (
               <div
                 key={index}
-                className="flex items-center p-4 border-l-4 border-blue-600 bg-white shadow-sm hover:shadow-md transition-shadow"
+                className="flex items-center p-4 border-l-4 border-primary bg-white shadow-sm hover:shadow-md transition-shadow"
               >
                 <span className="text-2xl mr-3">{item.icon}</span>
-                <h3 className="font-medium text-navy-blue">{item.title}</h3>
+                <h3 className="font-medium text-primary">{item.title}</h3>
               </div>
             ))}
           </div>
@@ -264,37 +259,8 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Pricing Section */}
-      <section className="py-16">
-        <div className="container mx-auto px-4">
-          <h2 className="text-3xl font-bold text-center mb-12">
-            {content.pricing.sectionTitle}
-          </h2>
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {content.pricing.plans.map((plan, index) => (
-              <div key={index}>
-                <Card className="border-2">
-                  <CardContent className="p-6">
-                    <h3 className="text-xl font-bold mb-4">{plan.title}</h3>
-                    <div className="text-3xl font-bold mb-6">{plan.price}</div>
-                    <ul className="space-y-3 mb-6">
-                      {plan.features.map((feature, i) => (
-                        <li key={i} className="flex items-start">
-                          <span className="text-sm">{feature}</span>
-                        </li>
-                      ))}
-                    </ul>
-                    <Button className="w-full">{plan.buttonText}</Button>
-                  </CardContent>
-                </Card>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
       {/* Contact Section */}
-      <section className="py-16 bg-gray-50">
+      <section className="py-16 bg-gray-50" id="kontakt">
         <div className="container mx-auto px-4">
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div>
@@ -369,45 +335,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Footer */}
-      <footer className="border-t py-12">
-        <div className="container mx-auto px-4">
-          <div className="grid md:grid-cols-4 gap-8">
-            <div>
-              <div className="font-bold text-xl text-blue-600 mb-4">
-                {content.footer.brand.name}
-              </div>
-              <p className="text-sm text-gray-600">
-                {content.footer.brand.tagline}
-              </p>
-            </div>
-            {content.footer.sections.map((section, index) => (
-              <div key={index}>
-                <h3 className="font-bold mb-4">{section.title}</h3>
-                <ul className="space-y-2">
-                  {section.links &&
-                    section.links.map((link, i) => (
-                      <li key={i}>
-                        <a href={link.href} className="text-sm">
-                          {link.text}
-                        </a>
-                      </li>
-                    ))}
-                  {section.items &&
-                    section.items.map((item, i) => (
-                      <li key={i} className="text-sm">
-                        {item}
-                      </li>
-                    ))}
-                </ul>
-              </div>
-            ))}
-          </div>
-          <div className="mt-8 pt-8 border-t text-center text-sm text-gray-600">
-            {content.footer.copyright}
-          </div>
-        </div>
-      </footer>
       <Dialog open={dialogOpen} onOpenChange={setDialogOpen}>
         <DialogContent>
           <DialogHeader>

@@ -1,5 +1,3 @@
-"use client"
-
 import { useCallback } from "react"
 import type { ContentStructure } from "../types/content"
 import plContent from "../content/pl.json"
