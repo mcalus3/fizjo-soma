@@ -16,8 +16,9 @@ export interface TeamMember {
 }
 
 export interface Specialization {
-  icon: string
+  backgroundImage: string
   title: string
+  description: string
 }
 
 export interface Testimonial {

@@ -213,15 +213,36 @@ export default function Home() {
           <h2 className="text-4xl font-bold text-[#1e2b5e] mb-12">
             {content.specializations.sectionTitle}
           </h2>
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 justify-items-center">
             {content.specializations.items.map((item, index) => (
-              <div
+              <Card
                 key={index}
-                className="flex items-center p-4 border-l-4 border-primary bg-white shadow-sm hover:shadow-md transition-shadow"
+                className="overflow-hidden aspect-square max-w-md"
               >
-                <span className="text-2xl mr-3">{item.icon}</span>
-                <h3 className="font-medium text-primary">{item.title}</h3>
-              </div>
+                <div className="relative h-48">
+                  <ImageComponent
+                    src={item.backgroundImage}
+                    alt={item.title}
+                    fill
+                    className="object-cover"
+                  />
+                </div>
+                <CardContent className="p-6">
+                  <h3 className="text-xl font-bold text-primary mb-3">
+                    {item.title}
+                  </h3>
+                  <p className="text-gray-600 mb-4">
+                    {item.description ||
+                      "Odkryj więcej szczegółów na temat naszych specjalistycznych usług."}
+                  </p>
+                  <Link
+                    href="/uslugi"
+                    className="inline-flex items-center text-primary font-medium hover:underline"
+                  >
+                    Dowiedz się więcej <span className="ml-1">→</span>
+                  </Link>
+                </CardContent>
+              </Card>
             ))}
           </div>
         </div>

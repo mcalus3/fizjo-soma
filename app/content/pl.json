@@ -87,14 +87,26 @@
   "specializations": {
     "sectionTitle": "Nasze specjalizacje",
     "items": [
-      { "icon": "🦵", "title": "Rehabilitacja ortopedyczna" },
-      { "icon": "🧠", "title": "Rehabilitacja neurologiczna" },
-      { "icon": "🏊", "title": "Rehabilitacja sportowa" },
-      { "icon": "👶", "title": "Fizjoterapia dziecięca" },
-      { "icon": "🤰", "title": "Fizjoterapia kobiet w ciąży" },
-      { "icon": "🦴", "title": "Terapia kręgosłupa" },
-      { "icon": "🧘", "title": "Terapia powięziowa" },
-      { "icon": "🚶", "title": "Nauka prawidłowego chodu" }
+      {
+        "backgroundImage": "services/6.jpg",
+        "title": "Terapia Manualna",
+        "description": "Specjalizacja obejmująca techniki manualne, mające na celu przywrócenie równowagi w układzie mięśniowo-szkieletowym."
+      },
+      {
+        "backgroundImage": "services/6.jpg",
+        "title": "Fizjoterapia Ortopedyczna",
+        "description": "Skupia się na rehabilitacji pourazowej i leczeniu schorzeń układu ruchu, z naciskiem na poprawę funkcji stawów i mięśni."
+      },
+      {
+        "backgroundImage": "services/6.jpg",
+        "title": "Rehabilitacja Neurologiczna",
+        "description": "Zajmuje się terapią pacjentów z zaburzeniami neurologicznymi, wspomagając proces powrotu do sprawności ruchowej."
+      },
+      {
+        "backgroundImage": "services/6.jpg",
+        "title": "Fizjoterapia Sportowa",
+        "description": "Koncentruje się na profilaktyce oraz rehabilitacji urazów sportowych, poprawiając wydolność i zmniejszając ryzyko kontuzji."
+      }
     ]
   },
   "testimonials": {
