@@ -28,13 +28,16 @@ export function useContent(language: ContentLanguage = "pl") {
       }
 
       // Handle array path for nested access
-      return path.reduce((obj: any, key: string) => {
-        if (obj && typeof obj === "object" && key in obj) {
-          return obj[key]
+      if (Array.isArray(path)) {
+        return path.reduce((obj: unknown, key: string) => {
+          if (obj && typeof obj === "object" && key in obj) {
+            return (obj as Record<string, unknown>)[key]
+          }
+          return undefined
+        }, content)
         }
         return undefined
-      }, content)
-    },
+      },
     [getContent],
   )
 

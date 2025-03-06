@@ -10,7 +10,6 @@ import {
 } from "@/components/ui/popover";
 import { usePathname } from "next/navigation";
 import Link from "next/link";
-import { ContentStructure } from "../types/content";
 
 export function Navigation() {
   const { content } = useContent("pl");
