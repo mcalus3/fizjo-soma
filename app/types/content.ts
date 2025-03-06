@@ -11,6 +11,8 @@ export interface TeamMember {
   imageAlt: string
   linkText: string
   linkHref: string
+  specializations?: string[]
+  certificates?: Certificate[]
 }
 
 export interface Specialization {
@@ -25,17 +27,22 @@ export interface Testimonial {
   rating: number
 }
 
-export interface PricingPlan {
-  title: string
-  price: string
-  features: string[]
-  buttonText: string
-}
-
 export interface FooterSection {
   title: string
   links?: NavigationLink[]
   items?: string[]
+}
+
+export interface Certificate {
+  image: string
+  title: string
+  date?: string
+}
+
+export interface TeamContent {
+  sectionLabel: string
+  sectionTitle: string
+  members: TeamMember[]
 }
 
 export interface ContentStructure {
@@ -44,21 +51,23 @@ export interface ContentStructure {
     links: NavigationLink[]
     contactButton: string
   }
+  images: {
+    hero: {
+      src: string
+      alt: string
+    }
+  }
   hero: {
     title: string
     subtitle: string
     buttonText: string
   }
   stats: Array<{
-    number: string
-    text: string
+    number: number
     suffix: string
+    text: string
   }>
-  team: {
-    sectionLabel: string
-    sectionTitle: string
-    members: TeamMember[]
-  }
+  team: TeamContent
   specializations: {
     sectionTitle: string
     items: Specialization[]
@@ -66,10 +75,6 @@ export interface ContentStructure {
   testimonials: {
     sectionTitle: string
     items: Testimonial[]
-  }
-  pricing: {
-    sectionTitle: string
-    plans: PricingPlan[]
   }
   contact: {
     sectionTitle: string
@@ -97,11 +102,17 @@ export interface ContentStructure {
     sections: FooterSection[]
     copyright: string
   }
-  images: {
-    hero: {
-      src: string
-      alt: string
-    }
+  services: {
+    title: string
+    description: string
+    bookButton: string
+    procedures: Array<{
+      id: string
+      name: string
+      price: string
+      description: string
+      backgroundImage: string
+      doctors: string[]
+    }>
   }
 }
-

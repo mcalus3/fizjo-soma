@@ -14,32 +14,73 @@
     "buttonText": "Umów wizytę"
   },
   "stats": [
-    { "number": "10", "suffix": "+", "text": "lat doświadczenia" },
-    { "number": "98", "suffix": "%", "text": "zadowolonych pacjentów" },
-    { "number": "15", "suffix": "+", "text": "wykwalifikowanych specjalistów" },
-    { "number": "5000", "suffix": "+", "text": "udanych terapii" }
+    { "number": 10, "suffix": "+", "text": "lat doświadczenia" },
+    { "number": 98, "suffix": "%", "text": "zadowolonych pacjentów" },
+    { "number": 15, "suffix": "+", "text": "wykwalifikowanych specjalistów" },
+    { "number": 5000, "suffix": "+", "text": "udanych terapii" }
   ],
   "team": {
-    "sectionLabel": "Nasi specjaliści",
-    "sectionTitle": "Poznaj nasz zespół",
+    "sectionLabel": "Nasz Zespół",
+    "sectionTitle": "Poznaj ekspertów, którzy tworzą naszą klinikę",
     "members": [
       {
-        "name": "Dr Anna Kowalska",
-        "title": "Główny fizjoterapeuta, Specjalista rehabilitacji ortopedycznej",
-        "bio": "Dr Anna Kowalska posiada ponad 15 lat doświadczenia w fizjoterapii. Specjalizuje się w rehabilitacji ortopedycznej i sportowej. Ukończyła Akademię Wychowania Fizycznego w Warszawie oraz liczne kursy specjalistyczne z zakresu terapii manualnej i rehabilitacji. Jej podejście do pacjenta opiera się na holistycznej ocenie i indywidualnym planie terapii.",
+        "name": "Dr. Anna Kowalska",
+        "title": "Specjalista Ortodoncji",
+        "bio": "Dr. Anna Kowalska posiada ponad 15 lat doświadczenia w ortodoncji. Ukończyła Warszawski Uniwersytet Medyczny i odbyła specjalizację w dziedzinie ortodoncji na Uniwersytecie w Poznaniu. Jest członkiem Polskiego Towarzystwa Ortodontycznego oraz European Orthodontic Society.",
         "image": "team/1.jpg",
-        "imageAlt": "Dr Anna Kowalska",
+        "imageAlt": "Dr. Anna Kowalska - Specjalista Ortodoncji",
+        "linkHref": "/zespol",
         "linkText": "Dowiedz się więcej",
-        "linkHref": "/o-nas"
+        "specializations": [
+          "Leczenie ortodontyczne dzieci i dorosłych",
+          "Ortodoncja lingwalna", 
+          "Invisalign Provider",
+          "Leczenie wad zgryzu"
+        ],
+        "certificates": [
+          {
+            "image": "/images/certificates/invisalign-provider.jpg",
+            "title": "Certyfikowany Provider Invisalign",
+            "date": "2022"
+          },
+          {
+            "image": "/images/certificates/pto-member.jpg",
+            "title": "Członek Polskiego Towarzystwa Ortodontycznego",
+            "date": "2015"
+          },
+          {
+            "image": "/images/certificates/advanced-ortho.jpg",
+            "title": "Advanced Orthodontics Course",
+            "date": "2019"
+          }
+        ]
       },
       {
-        "name": "Mgr Piotr Nowak",
-        "title": "Fizjoterapeuta, Specjalista terapii manualnej",
-        "bio": "Mgr Piotr Nowak jest absolwentem Uniwersytetu Medycznego w Poznaniu. Specjalizuje się w terapii manualnej i rehabilitacji neurologicznej. Regularnie poszerza swoją wiedzę uczestnicząc w międzynarodowych konferencjach i szkoleniach. Jego pasją jest pomaganie pacjentom w powrocie do pełnej sprawności po urazach i operacjach.",
+        "name": "Dr. Jan Nowak",
+        "title": "Chirurg Stomatologiczny",
+        "bio": "Dr. Jan Nowak specjalizuje się w chirurgii stomatologicznej i implantologii. Z pasją podchodzi do swojej pracy, stale poszerzając swoją wiedzę poprzez uczestnictwo w międzynarodowych konferencjach i szkoleniach.",
         "image": "team/2.jpg",
-        "imageAlt": "Mgr Piotr Nowak",
-        "linkText": "Dowiedz się więcej",
-        "linkHref": "/o-nas"
+        "imageAlt": "Dr. Jan Nowak - Chirurg Stomatologiczny",
+        "linkHref": "/zespol",
+        "linkText": "Poznaj szczegóły",
+        "specializations": [
+          "Implantologia",
+          "Chirurgia stomatologiczna",
+          "Regeneracja kości",
+          "Zabiegi z zakresu periodontologii"
+        ],
+        "certificates": [
+          {
+            "image": "/images/certificates/implant-master.jpg",
+            "title": "Master of Dental Implantology",
+            "date": "2021"
+          },
+          {
+            "image": "/images/certificates/surgical-excellence.jpg",
+            "title": "Certificate of Surgical Excellence",
+            "date": "2020"
+          }
+        ]
       }
     ]
   },
@@ -79,52 +120,26 @@
       }
     ]
   },
-  "pricing": {
-    "sectionTitle": "Cennik usług",
-    "plans": [
+  "services": {
+    "title": "Nasze Usługi",
+    "description": "Oferujemy szeroki zakres zabiegów dermatologicznych i estetycznych, wykonywanych przez doświadczonych specjalistów przy użyciu najnowocześniejszego sprzętu.",
+    "bookButton": "Umów wizytę",
+    "procedures": [
       {
-        "title": "Konsultacja fizjoterapeutyczna",
-        "price": "150 zł",
-        "features": [
-          "Wywiad z pacjentem",
-          "Ocena funkcjonalna",
-          "Plan terapii",
-          "Czas trwania: 45 min"
-        ],
-        "buttonText": "Zarezerwuj"
+        "id": "item-1",
+        "name": "Konsultacja dermatologiczna",
+        "price": "200 zł",
+        "description": "Kompleksowa konsultacja dermatologiczna obejmująca szczegółowe badanie skóry oraz plan leczenia.",
+        "backgroundImage": "services/5.jpg",
+        "doctors": ["dr Anna Kowalska", "dr Jan Nowak"]
       },
       {
-        "title": "Terapia manualna",
-        "price": "180 zł",
-        "features": [
-          "Indywidualna terapia",
-          "Techniki manualne",
-          "Ćwiczenia korekcyjne",
-          "Czas trwania: 60 min"
-        ],
-        "buttonText": "Zarezerwuj"
-      },
-      {
-        "title": "Masaż leczniczy",
-        "price": "120 zł",
-        "features": [
-          "Masaż wybranej okolicy",
-          "Techniki rozluźniające",
-          "Elementy terapii powięziowej",
-          "Czas trwania: 30 min"
-        ],
-        "buttonText": "Zarezerwuj"
-      },
-      {
-        "title": "Pakiet 5 zabiegów",
-        "price": "700 zł",
-        "features": [
-          "Oszczędność 150 zł",
-          "Indywidualny plan terapii",
-          "Konsultacja kontrolna",
-          "Materiały edukacyjne"
-        ],
-        "buttonText": "Zarezerwuj"
+        "id": "item-2",
+        "name": "Mezoterapia igłowa",
+        "price": "350 zł",
+        "description": "Zabieg polegający na wprowadzeniu substancji aktywnych w głębsze warstwy skóry, poprawiający jej kondycję i wygląd.",
+        "backgroundImage": "services/6.jpg",
+        "doctors": ["dr Anna Kowalska"]
       }
     ]
   },
