@@ -222,10 +222,7 @@ export default function Home() {
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 justify-items-center">
             {content.services.specializations.map((item, index) => (
-              <Card
-                key={index}
-                className="overflow-hidden aspect-square max-w-md"
-              >
+              <Card key={index} className="overflow-hidden max-w-md">
                 <div className="relative h-48">
                   <ImageComponent
                     src={item.backgroundImage}

@@ -70,11 +70,7 @@ export default function NewPage() {
                     </div>
 
                     {member.specializations && (
-                      <div
-                        className={`space-y-4 ${
-                          index % 2 === 0 ? "md:self-start" : "md:self-end"
-                        }`}
-                      >
+                      <div className="space-y-4">
                         <h4 className="text-xl font-semibold">
                           {content.team.specializationsTitle}
                         </h4>
