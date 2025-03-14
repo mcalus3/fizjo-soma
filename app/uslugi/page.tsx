@@ -31,17 +31,19 @@ export default function ServicesPage() {
           {description}
         </p>
       </section>
-      <Accordion type="single" className="space-y-10" collapsible>
+      <Accordion type="single" className="space-y-12 md:space-y-16" collapsible>
         {specializations.map((specialization: Specialization, i) => (
           <div key={i}>
-            <div className="text-2xl font-semibold mb-3 text-primary border-b bg-gray-900/5 rounded-lg p-4">
+            <div className="text-lg md:text-2xl font-semibold mb-1 text-primary bg-gray-900/5 p-4">
               {specialization.title}
             </div>
             {specialization.items.map((procedure: Procedure, j) => (
               <AccordionItem key={`${i} ${j}`} value={`${i} ${j}`}>
                 <AccordionTrigger className="flex justify-between items-center p-4">
                   <div className="flex-1">
-                    <h3 className="text-lg font-semibold">{procedure.name}</h3>
+                    <h3 className="md:text-lg font-semibold">
+                      {procedure.name}
+                    </h3>
                     <div className="flex flex-wrap items-center gap-2 mt-2">
                       <p className="text-primary font-medium">
                         {procedure.price}
@@ -51,7 +53,7 @@ export default function ServicesPage() {
                         {procedure.doctors.map((doctor, index) => (
                           <span
                             key={index}
-                            className="bg-gray-100 px-2 py-1 rounded-full text-sm text-gray-600"
+                            className="bg-gray-100 px-2 py-1 rounded-full text-xs md:text-sm text-gray-600"
                           >
                             {doctor}
                           </span>

@@ -59,11 +59,7 @@ export function Navigation() {
                   <Link
                     key={index}
                     href={link.href}
-                    className={`text-sm font-medium px-4 py-2 transition-all rounded-md hover:bg-gray-100 ${
-                      pathname === link.href
-                        ? "after:absolute after:bottom-0 after:left-0 after:w-full after:h-0.5 after:bg-black"
-                        : ""
-                    }`}
+                    className="text-sm font-medium px-4 py-2 transition-all rounded-md hover:bg-gray-100"
                   >
                     {link.text}
                   </Link>

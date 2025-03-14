@@ -278,7 +278,7 @@
     "sections": [
       {
         "title": "O nas",
-        "links": [{ "text": "Nasz zespół", "href": "#" }]
+        "links": [{ "text": "Nasz zespół", "href": "/zespol" }]
       },
       {
         "title": "Usługi",

@@ -231,7 +231,7 @@ export default function Home() {
         <div className="container mx-auto px-4">
           <div className="grid md:grid-cols-3 gap-8">
             {/* Contact Info Card */}
-            <div className="bg-white p-6 rounded-lg shadow-sm space-y-6">
+            <div className="bg-white p-6 rounded-lg shadow-sm space-y-4">
               <h3 className="text-2xl font-bold">
                 {content.contact.sectionTitle}
               </h3>
