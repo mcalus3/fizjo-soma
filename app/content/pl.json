@@ -35,7 +35,7 @@
         "linkText": "Dowiedz się więcej",
         "specializations": [
           "Leczenie ortodontyczne dzieci i dorosłych",
-          "Ortodoncja lingwalna", 
+          "Ortodoncja lingwalna",
           "Invisalign Provider",
           "Leczenie wad zgryzu"
         ],
@@ -131,31 +131,6 @@
       }
     ]
   },
-  "specializations": {
-    "sectionTitle": "Nasze specjalizacje",
-    "items": [
-      {
-        "backgroundImage": "services/proszek.png",
-        "title": "Terapia Manualna",
-        "description": "Specjalizacja obejmująca techniki manualne, mające na celu przywrócenie równowagi w układzie mięśniowo-szkieletowym."
-      },
-      {
-        "backgroundImage": "services/6.jpg",
-        "title": "Fizjoterapia Ortopedyczna",
-        "description": "Skupia się na rehabilitacji pourazowej i leczeniu schorzeń układu ruchu, z naciskiem na poprawę funkcji stawów i mięśni."
-      },
-      {
-        "backgroundImage": "services/6.jpg",
-        "title": "Rehabilitacja Neurologiczna",
-        "description": "Zajmuje się terapią pacjentów z zaburzeniami neurologicznymi, wspomagając proces powrotu do sprawności ruchowej."
-      },
-      {
-        "backgroundImage": "services/6.jpg",
-        "title": "Fizjoterapia Sportowa",
-        "description": "Koncentruje się na profilaktyce oraz rehabilitacji urazów sportowych, poprawiając wydolność i zmniejszając ryzyko kontuzji."
-      }
-    ]
-  },
   "testimonials": {
     "sectionTitle": "Co mówią nasi pacjenci",
     "items": [
@@ -176,29 +151,115 @@
         "role": "Pacjentka z rwą kulszową",
         "content": "Cierpiałam na rwę kulszową przez wiele miesięcy. Terapeuci z FizjoMed nie tylko pomogli mi pozbyć się bólu, ale też nauczyli mnie ćwiczeń, które zapobiegają nawrotom.",
         "rating": 5
+      },
+      {
+        "name": "Maria Wiśniewska",
+        "role": "Pacjentka z rwą kulszową",
+        "content": "Cierpiałam na rwę kulszową przez wiele miesięcy. Terapeuci z FizjoMed nie tylko pomogli mi pozbyć się bólu, ale też nauczyli mnie ćwiczeń, które zapobiegają nawrotom.",
+        "rating": 5
+      },
+      {
+        "name": "Maria Wiśniewska",
+        "role": "Pacjentka z rwą kulszową",
+        "content": "Cierpiałam na rwę kulszową przez wiele miesięcy. Terapeuci z FizjoMed nie tylko pomogli mi pozbyć się bólu, ale też nauczyli mnie ćwiczeń, które zapobiegają nawrotom.",
+        "rating": 5
+      },
+      {
+        "name": "Maria Wiśniewska",
+        "role": "Pacjentka z rwą kulszową",
+        "content": "Cierpiałam na rwę kulszową przez wiele miesięcy. Terapeuci z FizjoMed nie tylko pomogli mi pozbyć się bólu, ale też nauczyli mnie ćwiczeń, które zapobiegają nawrotom.",
+        "rating": 5
       }
     ]
   },
   "services": {
-    "title": "Nasze Usługi",
+    "title": "Nasze specjalizacje",
     "description": "Oferujemy szeroki zakres zabiegów dermatologicznych i estetycznych, wykonywanych przez doświadczonych specjalistów przy użyciu najnowocześniejszego sprzętu.",
     "bookButton": "Umów wizytę",
-    "procedures": [
+    "specializations": [
       {
-        "id": "item-1",
-        "name": "Konsultacja dermatologiczna",
-        "price": "200 zł",
-        "description": "Kompleksowa konsultacja dermatologiczna obejmująca szczegółowe badanie skóry oraz plan leczenia. Kompleksowa konsultacja dermatologiczna obejmująca szczegółowe badanie skóry oraz plan leczenia. Kompleksowa konsultacja dermatologiczna obejmująca szczegółowe badanie skóry oraz plan leczenia. Kompleksowa konsultacja dermatologiczna obejmująca szczegółowe badanie skóry oraz plan leczenia. Kompleksowa konsultacja dermatologiczna obejmująca szczegółowe badanie skóry oraz plan leczenia. Kompleksowa konsultacja dermatologiczna obejmująca szczegółowe badanie skóry oraz plan leczenia. Kompleksowa konsultacja dermatologiczna obejmująca szczegółowe badanie skóry oraz plan leczenia. Kompleksowa konsultacja dermatologiczna obejmująca szczegółowe badanie skóry oraz plan leczenia.",
-        "backgroundImage": "services/5.jpg",
-        "doctors": ["dr Anna Kowalska", "dr Jan Nowak"]
+        "backgroundImage": "services/proszek.png",
+        "title": "Terapia Manualna",
+        "description": "Specjalizacja obejmująca techniki manualne, mające na celu przywrócenie równowagi w układzie mięśniowo-szkieletowym.",
+        "items": [
+          {
+            "name": "Konsultacja dermatologiczna",
+            "price": "200 zł",
+            "description": "Kompleksowa konsultacja dermatologiczna obejmująca szczegółowe badanie skóry oraz plan leczenia. Kompleksowa konsultacja dermatologiczna obejmująca szczegółowe badanie skóry oraz plan leczenia. Kompleksowa konsultacja dermatologiczna obejmująca szczegółowe badanie skóry oraz plan leczenia. Kompleksowa konsultacja dermatologiczna obejmująca szczegółowe badanie skóry oraz plan leczenia. Kompleksowa konsultacja dermatologiczna obejmująca szczegółowe badanie skóry oraz plan leczenia. Kompleksowa konsultacja dermatologiczna obejmująca szczegółowe badanie skóry oraz plan leczenia. Kompleksowa konsultacja dermatologiczna obejmująca szczegółowe badanie skóry oraz plan leczenia. Kompleksowa konsultacja dermatologiczna obejmująca szczegółowe badanie skóry oraz plan leczenia.",
+            "backgroundImage": "services/5.jpg",
+            "doctors": ["dr Anna Kowalska", "dr Jan Nowak"]
+          },
+          {
+            "name": "Mezoterapia igłowa",
+            "price": "350 zł",
+            "description": "Zabieg polegający na wprowadzeniu substancji aktywnych w głębsze warstwy skóry, poprawiający jej kondycję i wygląd.",
+            "backgroundImage": "services/6.jpg",
+            "doctors": ["dr Anna Kowalska"]
+          }
+        ]
       },
       {
-        "id": "item-2",
-        "name": "Mezoterapia igłowa",
-        "price": "350 zł",
-        "description": "Zabieg polegający na wprowadzeniu substancji aktywnych w głębsze warstwy skóry, poprawiający jej kondycję i wygląd.",
         "backgroundImage": "services/6.jpg",
-        "doctors": ["dr Anna Kowalska"]
+        "title": "Fizjoterapia Ortopedyczna",
+        "description": "Skupia się na rehabilitacji pourazowej i leczeniu schorzeń układu ruchu, z naciskiem na poprawę funkcji stawów i mięśni.",
+        "items": [
+          {
+            "name": "Konsultacja dermatologiczna",
+            "price": "200 zł",
+            "description": "Kompleksowa konsultacja dermatologiczna obejmująca szczegółowe badanie skóry oraz plan leczenia. Kompleksowa konsultacja dermatologiczna obejmująca szczegółowe badanie skóry oraz plan leczenia. Kompleksowa konsultacja dermatologiczna obejmująca szczegółowe badanie skóry oraz plan leczenia. Kompleksowa konsultacja dermatologiczna obejmująca szczegółowe badanie skóry oraz plan leczenia. Kompleksowa konsultacja dermatologiczna obejmująca szczegółowe badanie skóry oraz plan leczenia. Kompleksowa konsultacja dermatologiczna obejmująca szczegółowe badanie skóry oraz plan leczenia. Kompleksowa konsultacja dermatologiczna obejmująca szczegółowe badanie skóry oraz plan leczenia. Kompleksowa konsultacja dermatologiczna obejmująca szczegółowe badanie skóry oraz plan leczenia.",
+            "backgroundImage": "services/5.jpg",
+            "doctors": ["dr Anna Kowalska", "dr Jan Nowak"]
+          },
+          {
+            "name": "Mezoterapia igłowa",
+            "price": "350 zł",
+            "description": "Zabieg polegający na wprowadzeniu substancji aktywnych w głębsze warstwy skóry, poprawiający jej kondycję i wygląd.",
+            "backgroundImage": "services/6.jpg",
+            "doctors": ["dr Anna Kowalska"]
+          }
+        ]
+      },
+      {
+        "backgroundImage": "services/6.jpg",
+        "title": "Rehabilitacja Neurologiczna",
+        "description": "Zajmuje się terapią pacjentów z zaburzeniami neurologicznymi, wspomagając proces powrotu do sprawności ruchowej.",
+        "items": [
+          {
+            "name": "Konsultacja dermatologiczna",
+            "price": "200 zł",
+            "description": "Kompleksowa konsultacja dermatologiczna obejmująca szczegółowe badanie skóry oraz plan leczenia. Kompleksowa konsultacja dermatologiczna obejmująca szczegółowe badanie skóry oraz plan leczenia. Kompleksowa konsultacja dermatologiczna obejmująca szczegółowe badanie skóry oraz plan leczenia. Kompleksowa konsultacja dermatologiczna obejmująca szczegółowe badanie skóry oraz plan leczenia. Kompleksowa konsultacja dermatologiczna obejmująca szczegółowe badanie skóry oraz plan leczenia. Kompleksowa konsultacja dermatologiczna obejmująca szczegółowe badanie skóry oraz plan leczenia. Kompleksowa konsultacja dermatologiczna obejmująca szczegółowe badanie skóry oraz plan leczenia. Kompleksowa konsultacja dermatologiczna obejmująca szczegółowe badanie skóry oraz plan leczenia.",
+            "backgroundImage": "services/5.jpg",
+            "doctors": ["dr Anna Kowalska", "dr Jan Nowak"]
+          },
+          {
+            "name": "Mezoterapia igłowa",
+            "price": "350 zł",
+            "description": "Zabieg polegający na wprowadzeniu substancji aktywnych w głębsze warstwy skóry, poprawiający jej kondycję i wygląd.",
+            "backgroundImage": "services/6.jpg",
+            "doctors": ["dr Anna Kowalska"]
+          }
+        ]
+      },
+      {
+        "backgroundImage": "services/6.jpg",
+        "title": "Fizjoterapia Sportowa",
+        "description": "Koncentruje się na profilaktyce oraz rehabilitacji urazów sportowych, poprawiając wydolność i zmniejszając ryzyko kontuzji.",
+        "items": [
+          {
+            "name": "Konsultacja dermatologiczna",
+            "price": "200 zł",
+            "description": "Kompleksowa konsultacja dermatologiczna obejmująca szczegółowe badanie skóry oraz plan leczenia. Kompleksowa konsultacja dermatologiczna obejmująca szczegółowe badanie skóry oraz plan leczenia. Kompleksowa konsultacja dermatologiczna obejmująca szczegółowe badanie skóry oraz plan leczenia. Kompleksowa konsultacja dermatologiczna obejmująca szczegółowe badanie skóry oraz plan leczenia. Kompleksowa konsultacja dermatologiczna obejmująca szczegółowe badanie skóry oraz plan leczenia. Kompleksowa konsultacja dermatologiczna obejmująca szczegółowe badanie skóry oraz plan leczenia. Kompleksowa konsultacja dermatologiczna obejmująca szczegółowe badanie skóry oraz plan leczenia. Kompleksowa konsultacja dermatologiczna obejmująca szczegółowe badanie skóry oraz plan leczenia.",
+            "backgroundImage": "services/5.jpg",
+            "doctors": ["dr Anna Kowalska", "dr Jan Nowak"]
+          },
+          {
+            "name": "Mezoterapia igłowa",
+            "price": "350 zł",
+            "description": "Zabieg polegający na wprowadzeniu substancji aktywnych w głębsze warstwy skóry, poprawiający jej kondycję i wygląd.",
+            "backgroundImage": "services/6.jpg",
+            "doctors": ["dr Anna Kowalska"]
+          }
+        ]
       }
     ]
   },

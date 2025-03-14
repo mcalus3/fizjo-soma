@@ -112,6 +112,7 @@ export default function NewPage() {
                       <Carousel
                         opts={{
                           align: "start",
+                          dragFree: true,
                         }}
                         className="w-full"
                       >

@@ -25,6 +25,13 @@ import { useToast } from "@/hooks/use-toast";
 import { KontaktLink } from "./components/Navigation";
 import { usePathname } from "next/navigation";
 import CountUp from "react-countup";
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselPrevious,
+  CarouselNext,
+} from "@/components/ui/carousel";
 
 export default function Home() {
   const { content } = useContent("pl");
@@ -117,7 +124,7 @@ export default function Home() {
             <KontaktLink
               pathname={pathname}
               content={content.hero.buttonText}
-              className="bg-white text-primary font-bold px-8 py-4 text-lg shadow-md border border-input bg-background hover:bg-accent hover:text-accent-foreground rounded-xl"
+              className="bg-primary text-white font-bold px-8 py-4 text-lg shadow-sm shadow-white/20 hover:bg-accent hover:text-accent-foreground rounded-xl"
             />
           </div>
         </div>
@@ -159,7 +166,7 @@ export default function Home() {
           <h2 className="text-3xl font-bold text-center mb-2">
             {content.team.sectionLabel}
           </h2>
-          <p className="text-center text-sm text-primary mb-12">
+          <p className="text-center text-primary mb-12">
             {content.team.sectionTitle}
           </p>
           <div className="flex flex-col gap-12">
@@ -211,10 +218,10 @@ export default function Home() {
       <section className="py-16 bg-white">
         <div className="container mx-auto px-4">
           <h2 className="text-4xl font-bold text-[#1e2b5e] mb-12">
-            {content.specializations.sectionTitle}
+            {content.services.title}
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 justify-items-center">
-            {content.specializations.items.map((item, index) => (
+            {content.services.specializations.map((item, index) => (
               <Card
                 key={index}
                 className="overflow-hidden aspect-square max-w-md"
@@ -249,33 +256,50 @@ export default function Home() {
       </section>
 
       {/* Testimonial Section */}
-      <section className="py-16 bg-white">
+      <section className="py-16 px-10 bg-white">
         <div className="container mx-auto px-4">
           <h2 className="text-3xl font-bold text-center mb-12">
             {content.testimonials.sectionTitle}
           </h2>
-          <div className="grid md:grid-cols-3 gap-8">
-            {content.testimonials.items.map((testimonial, index) => (
-              <div key={index}>
-                <Card className="bg-gray-50">
-                  <CardContent className="p-6">
-                    <div className="flex items-center mb-4">
-                      {[...Array(testimonial.rating)].map((_, i) => (
-                        <Star
-                          key={i}
-                          className="w-5 h-5 text-yellow-400 fill-current"
-                        />
-                      ))}
-                    </div>
-                    <p className="text-gray-600 mb-4">{testimonial.content}</p>
-                    <div className="font-semibold">{testimonial.name}</div>
-                    <div className="text-sm text-gray-500">
-                      {testimonial.role}
-                    </div>
-                  </CardContent>
-                </Card>
+          <div className="relative">
+            <Carousel
+              opts={{
+                align: "start",
+                dragFree: true,
+              }}
+            >
+              <CarouselContent>
+                {content.testimonials.items.map((testimonial, index) => (
+                  <CarouselItem key={index} className="md:basis-1/3">
+                    <Card className="bg-gray-50">
+                      <CardContent className="p-6">
+                        <div className="flex items-center mb-4">
+                          {[...Array(testimonial.rating)].map((_, i) => (
+                            <Star
+                              key={i}
+                              className="w-5 h-5 text-yellow-400 fill-current"
+                            />
+                          ))}
+                        </div>
+                        <p className="text-gray-600 mb-4">
+                          {testimonial.content}
+                        </p>
+                        <div className="font-semibold">{testimonial.name}</div>
+                        <div className="text-sm text-gray-500">
+                          {testimonial.role}
+                        </div>
+                      </CardContent>
+                    </Card>
+                  </CarouselItem>
+                ))}
+              </CarouselContent>
+              <div className="absolute left-8 top-1/2 -translate-y-1/2">
+                <CarouselPrevious className="relative" />
               </div>
-            ))}
+              <div className="absolute right-8 top-1/2 -translate-y-1/2">
+                <CarouselNext className="relative" />
+              </div>
+            </Carousel>
           </div>
         </div>
       </section>

@@ -19,6 +19,13 @@ export interface Specialization {
   backgroundImage: string
   title: string
   description: string
+  items: Array<{
+    name: string
+    price: string
+    description: string
+    backgroundImage: string
+    doctors: string[]
+  }>
 }
 
 export interface Testimonial {
@@ -110,13 +117,7 @@ export interface ContentStructure {
     title: string
     description: string
     bookButton: string
-    procedures: Array<{
-      id: string
-      name: string
-      price: string
-      description: string
-      backgroundImage: string
-      doctors: string[]
-    }>
+    specializations: Array<Specialization>
+
   }
 }
