@@ -93,6 +93,7 @@ export interface ContentStructure {
     address2: string;
     phone: string;
     email: string;
+    mapImage: string;
   };
   footer: {
     brand: {

@@ -265,10 +265,11 @@
   },
   "contact": {
     "sectionTitle": "Umów się na wizytę",
-    "address1": "123 Example Street",
-    "address2": "City, 12-345",
-    "phone": "+48 123 456 789",
-    "email": "contact@example.com"
+    "address1": "Janki Bryla 35/LU4",
+    "address2": "81-577 Gdynia",
+    "phone": "+48 535 292 141",
+    "email": "fizjosoma.gabinet@gmail.com",
+    "mapImage": "/images/contact/map.png"
   },
   "footer": {
     "brand": {
@@ -292,10 +293,10 @@
       {
         "title": "Kontakt",
         "items": [
-          "ul. Zdrowotna 15, Warszawa",
-          "+48 123 456 789",
-          "kontakt@fizjomed.pl",
-          "Pon-Pt: 8:00-20:00, Sob: 9:00-14:00"
+          "Janki Bryla 35/LU4",
+          "81-577 Gdynia",
+          "+48 535 292 141",
+          "fizjosoma.gabinet@gmail.com"
         ]
       }
     ],

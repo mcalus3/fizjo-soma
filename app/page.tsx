@@ -256,10 +256,17 @@ export default function Home() {
                     <p className="text-gray-600">{content.contact.address2}</p>
                   </div>
                 </div>
-
-                {/* Google Maps Placeholder */}
-                <div className="w-full h-64 bg-gray-100 rounded-lg flex items-center justify-center">
-                  <p className="text-gray-500">Google Maps Widget</p>
+                <div className="shadow rounded-lg overflow-hidden">
+                  <Link
+                    href={"https://maps.app.goo.gl/ot922P9YvLcg3ma76"}
+                    target="_blank"
+                  >
+                    <ImageComponent
+                      src={content.contact.mapImage}
+                      alt={"Map with location"}
+                      className="object-cover"
+                    />
+                  </Link>
                 </div>
               </div>
             </div>

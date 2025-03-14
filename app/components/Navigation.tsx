@@ -28,6 +28,7 @@ export function Navigation() {
         <div className="hidden md:flex items-center space-x-8">
           {content.navigation.links.map((link, index) => (
             <Link
+              prefetch
               key={index}
               href={link.href}
               className={`text-sm font-medium relative px-4 py-2 transition-all rounded-md hover:bg-gray-100 ${
@@ -57,6 +58,7 @@ export function Navigation() {
               <div className="flex flex-col space-y-4">
                 {content.navigation.links.map((link, index) => (
                   <Link
+                    prefetch
                     key={index}
                     href={link.href}
                     className="text-sm font-medium px-4 py-2 transition-all rounded-md hover:bg-gray-100"
