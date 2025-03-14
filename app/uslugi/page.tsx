@@ -31,7 +31,7 @@ export default function ServicesPage() {
       </section>
       <Accordion type="single" className="space-y-10" collapsible>
         {specializations.map((specialization: Specialization, i) => (
-          <div>
+          <div key={i}>
             <div className="text-2xl font-semibold mb-3">
               {specialization.title}
             </div>

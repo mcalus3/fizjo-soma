@@ -138,7 +138,7 @@ export default function Home() {
               <div key={index}>
                 <Card className="bg-primary text-white">
                   <CardContent className="p-6 text-center">
-                    <div className="text-4xl font-bold">
+                    <div className=" text-2xl md:text-3xl font-bold">
                       <CountUp
                         end={Number(stat.number)}
                         suffix={stat.suffix}
