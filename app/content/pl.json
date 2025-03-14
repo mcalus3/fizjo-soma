@@ -22,6 +22,8 @@
   "team": {
     "sectionLabel": "Nasz Zespół",
     "sectionTitle": "Poznaj ekspertów, którzy tworzą naszą klinikę",
+    "specializationsTitle": "specjalizacje",
+    "certificationsTitle": "certyfikaty",
     "members": [
       {
         "name": "Dr. Anna Kowalska",
@@ -29,7 +31,7 @@
         "bio": "Dr. Anna Kowalska posiada ponad 15 lat doświadczenia w ortodoncji. Ukończyła Warszawski Uniwersytet Medyczny i odbyła specjalizację w dziedzinie ortodoncji na Uniwersytecie w Poznaniu. Jest członkiem Polskiego Towarzystwa Ortodontycznego oraz European Orthodontic Society.",
         "image": "team/1.jpg",
         "imageAlt": "Dr. Anna Kowalska - Specjalista Ortodoncji",
-        "linkHref": "/zespol",
+        "linkHref": "/uslugi",
         "linkText": "Dowiedz się więcej",
         "specializations": [
           "Leczenie ortodontyczne dzieci i dorosłych",
@@ -52,6 +54,26 @@
             "image": "/images/certificates/advanced-ortho.jpg",
             "title": "Advanced Orthodontics Course",
             "date": "2019"
+          },
+          {
+            "image": "/images/certificates/advanced-ortho.jpg",
+            "title": "Advanced Orthodontics Course",
+            "date": "2019"
+          },
+          {
+            "image": "/images/certificates/advanced-ortho.jpg",
+            "title": "Advanced Orthodontics Course",
+            "date": "2019"
+          },
+          {
+            "image": "/images/certificates/advanced-ortho.jpg",
+            "title": "Advanced Orthodontics Course",
+            "date": "2019"
+          },
+          {
+            "image": "/images/certificates/advanced-ortho.jpg",
+            "title": "Advanced Orthodontics Course",
+            "date": "2019"
           }
         ]
       },
@@ -61,7 +83,7 @@
         "bio": "Dr. Jan Nowak specjalizuje się w chirurgii stomatologicznej i implantologii. Z pasją podchodzi do swojej pracy, stale poszerzając swoją wiedzę poprzez uczestnictwo w międzynarodowych konferencjach i szkoleniach.",
         "image": "team/2.jpg",
         "imageAlt": "Dr. Jan Nowak - Chirurg Stomatologiczny",
-        "linkHref": "/zespol",
+        "linkHref": "/uslugi",
         "linkText": "Poznaj szczegóły",
         "specializations": [
           "Implantologia",
@@ -79,6 +101,31 @@
             "image": "/images/certificates/surgical-excellence.jpg",
             "title": "Certificate of Surgical Excellence",
             "date": "2020"
+          },
+          {
+            "image": "/images/certificates/advanced-ortho.jpg",
+            "title": "Advanced Orthodontics Course",
+            "date": "2019"
+          },
+          {
+            "image": "/images/certificates/advanced-ortho.jpg",
+            "title": "Advanced Orthodontics Course",
+            "date": "2019"
+          },
+          {
+            "image": "/images/certificates/advanced-ortho.jpg",
+            "title": "Advanced Orthodontics Course",
+            "date": "2019"
+          },
+          {
+            "image": "/images/certificates/advanced-ortho.jpg",
+            "title": "Advanced Orthodontics Course",
+            "date": "2019"
+          },
+          {
+            "image": "/images/certificates/advanced-ortho.jpg",
+            "title": "Advanced Orthodontics Course",
+            "date": "2019"
           }
         ]
       }

@@ -1,9 +1,17 @@
 "use client";
 
-import { Link } from "lucide-react";
 import { useContent } from "../hooks/useContent";
 import { ImageComponent } from "../components/image-component";
 import { motion } from "framer-motion";
+import Link from "next/link";
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from "@/components/ui/carousel";
+import { Card, CardContent } from "@/components/ui/card";
 
 const fadeInUp = {
   hidden: { opacity: 0, y: 20 },
@@ -12,16 +20,19 @@ const fadeInUp = {
 
 export default function NewPage() {
   const { content } = useContent("pl");
+
   return (
-    <main className="p-4">
-      <section className="py-16 bg-gray-50">
-        <div className="container mx-auto px-4">
+    <main className="py-4">
+      <section className="py-4">
+        <div className="py-3 bg-gray-50 mb-12">
           <h2 className="text-3xl font-bold text-center mb-2">
             {content.team.sectionLabel}
           </h2>
-          <p className="text-center text-sm text-primary mb-12">
+          <p className="text-center text-sm text-primary">
             {content.team.sectionTitle}
           </p>
+        </div>
+        <div className="container mx-auto px-8">
           <div className="flex flex-col gap-24">
             {content.team.members.map((member, index) => (
               <motion.section
@@ -47,7 +58,7 @@ export default function NewPage() {
                       className="object-cover rounded-lg shadow-lg"
                     />
                   </div>
-                  <div className="md:w-2/3 space-y-6">
+                  <div className={`md:w-1/2 flex flex-col gap-6`}>
                     <h3 className="text-3xl font-bold text-primary">
                       {member.name}
                     </h3>
@@ -57,34 +68,96 @@ export default function NewPage() {
                     <div className="prose prose-lg max-w-none">
                       <p className="text-gray-600">{member.bio}</p>
                     </div>
+
                     {member.specializations && (
-                      <div className="space-y-2">
+                      <div
+                        className={`space-y-4 ${
+                          index % 2 === 0 ? "md:self-start" : "md:self-end"
+                        }`}
+                      >
                         <h4 className="text-xl font-semibold">
-                          Specializations
+                          {content.team.specializationsTitle}
                         </h4>
-                        <ul className="list-disc list-inside space-y-1">
-                          {member.specializations.map((spec, i) => (
-                            <li key={i} className="text-gray-600">
-                              {spec}
-                            </li>
-                          ))}
-                        </ul>
+                        <div className="flex flex-col items-start">
+                          <div>
+                            {member.specializations.map((spec, i) => (
+                              <div
+                                key={i}
+                                className="border-b py-4 min-w-80 max-w-lg"
+                              >
+                                <span className="text-left font-medium">
+                                  {spec}
+                                </span>
+                              </div>
+                            ))}
+                          </div>
+                        </div>
+                        <Link
+                          href={member.linkHref}
+                          className="inline-flex items-center text-primary font-medium hover:underline"
+                        >
+                          {member.linkText} <span className="ml-1">→</span>
+                        </Link>
                       </div>
                     )}
-                    <Link
-                      href={member.linkHref}
-                      className="inline-flex items-center text-primary font-medium hover:underline"
-                    >
-                      {member.linkText} <span className="ml-1">→</span>
-                    </Link>
                   </div>
                 </div>
 
                 {member.certificates && member.certificates.length > 0 && (
                   <div className="mt-12">
                     <h4 className="text-2xl font-semibold mb-6 text-center">
-                      Certificates & Achievements
+                      {content.team.certificationsTitle}
                     </h4>
+                    <div className="relative">
+                      <Carousel
+                        opts={{
+                          align: "start",
+                        }}
+                        className="w-full"
+                      >
+                        <CarouselContent className="py-4">
+                          {member.certificates.map((certificate, i) => (
+                            <CarouselItem
+                              key={i}
+                              className="md:basis-1/2 lg:basis-1/3 xl:basis-1/4"
+                            >
+                              <div className="p-1">
+                                <Card className="border-white shadow-sm hover:shadow-md transition-shadow">
+                                  <CardContent className="flex flex-col items-center p-6">
+                                    <div className="relative w-full h-48 mb-4">
+                                      <ImageComponent
+                                        src={
+                                          certificate.image ||
+                                          "/certificate-placeholder.svg"
+                                        }
+                                        alt={certificate.title}
+                                        fill
+                                        className="object-contain"
+                                      />
+                                    </div>
+                                    <h5 className="font-medium text-center">
+                                      {certificate.title}
+                                    </h5>
+                                    {certificate.issuer && (
+                                      <p className="text-sm text-gray-500 text-center mt-1">
+                                        {certificate.issuer}
+                                      </p>
+                                    )}
+                                    {certificate.date && (
+                                      <p className="text-xs text-gray-400 text-center mt-1">
+                                        {certificate.date}
+                                      </p>
+                                    )}
+                                  </CardContent>
+                                </Card>
+                              </div>
+                            </CarouselItem>
+                          ))}
+                        </CarouselContent>
+                        <CarouselPrevious className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-1/2 bg-white shadow-md hover:bg-gray-50" />
+                        <CarouselNext className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-1/2 bg-white shadow-md hover:bg-gray-50" />
+                      </Carousel>
+                    </div>
                   </div>
                 )}
               </motion.section>

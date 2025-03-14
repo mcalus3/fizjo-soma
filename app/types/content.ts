@@ -38,11 +38,14 @@ export interface Certificate {
   image: string
   title: string
   date?: string
+  issuer?: string
 }
 
 export interface TeamContent {
   sectionLabel: string
   sectionTitle: string
+  specializationsTitle: string
+  certificationsTitle: string
   members: TeamMember[]
 }
 
