@@ -264,45 +264,29 @@
     ]
   },
   "contact": {
-    "sectionTitle": "Umów się na wizytę już dziś!",
-    "form": {
-      "namePlaceholder": "Imię i nazwisko",
-      "phonePlaceholder": "Telefon",
-      "emailPlaceholder": "Email",
-      "datePlaceholder": "Preferowana data",
-      "timePlaceholder": "Preferowana godzina",
-      "detailsPlaceholder": "Opisz swój problem",
-      "privacyLabel": "Wyrażam zgodę na przetwarzanie moich danych osobowych zgodnie z polityką prywatności",
-      "submitButton": "UMÓW WIZYTĘ",
-      "submittingButton": "Wysyłanie...",
-      "successTitle": "Sukces!",
-      "successMessage": "Twoja wiadomość została wysłana. Skontaktujemy się z Tobą wkrótce."
-    },
-    "image": "contact/3.jpg",
-    "imageAlt": "Kontakt"
+    "sectionTitle": "Umów się na wizytę",
+    "address1": "123 Example Street",
+    "address2": "City, 12-345",
+    "phone": "+48 123 456 789",
+    "email": "contact@example.com"
   },
   "footer": {
     "brand": {
-      "name": "FizjoMed",
+      "name": "Fizjo Soma",
       "tagline": "Profesjonalna fizjoterapia"
     },
     "sections": [
       {
         "title": "O nas",
-        "links": [
-          { "text": "Nasz zespół", "href": "#" },
-          { "text": "Historia", "href": "#" },
-          { "text": "Polityka prywatności", "href": "#" },
-          { "text": "Regulamin", "href": "#" }
-        ]
+        "links": [{ "text": "Nasz zespół", "href": "#" }]
       },
       {
         "title": "Usługi",
         "links": [
-          { "text": "Fizjoterapia ortopedyczna", "href": "#" },
-          { "text": "Fizjoterapia neurologiczna", "href": "#" },
-          { "text": "Masaż leczniczy", "href": "#" },
-          { "text": "Rehabilitacja sportowa", "href": "#" }
+          { "text": "Terapia Manualna", "href": "/uslugi" },
+          { "text": "Fizjoterapia Ortopedyczna", "href": "/uslugi" },
+          { "text": "Rehabilitacja Neurologiczna", "href": "/uslugi" },
+          { "text": "Fizjoterapia Sportowa", "href": "/uslugi" }
         ]
       },
       {
@@ -315,7 +299,7 @@
         ]
       }
     ],
-    "copyright": "© 2025 FizjoMed. Wszelkie prawa zastrzeżone."
+    "copyright": "© 2025 Fizjo Soma. Wszelkie prawa zastrzeżone."
   },
   "images": {
     "hero": {

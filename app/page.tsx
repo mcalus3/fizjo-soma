@@ -8,7 +8,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Checkbox } from "@/components/ui/checkbox";
-import { Star } from "lucide-react";
+import { Mail, MapPin, Phone, Star } from "lucide-react";
 import { submitContactForm } from "./actions";
 import { useState } from "react";
 import { ToastAction } from "@/components/ui/toast";
@@ -304,89 +304,57 @@ export default function Home() {
       {/* Contact Section */}
       <section className="py-16 bg-gray-50" id="kontakt">
         <div className="container mx-auto px-4">
-          <div className="grid md:grid-cols-2 gap-12 items-center">
-            <div>
-              <ImageComponent
-                src={content.contact.image || "/placeholder.svg"}
-                alt={content.contact.imageAlt}
-                width={600}
-                height={400}
-                className="rounded-lg object-cover"
-              />
-            </div>
-            <div className="space-y-6">
-              <h2 className="text-3xl font-bold">
+          <div className="grid md:grid-cols-3 gap-8">
+            {/* Contact Info Card */}
+            <div className="bg-white p-6 rounded-lg shadow-sm space-y-6">
+              <h3 className="text-2xl font-bold">
                 {content.contact.sectionTitle}
-              </h2>
-              <form className="space-y-4" onSubmit={handleSubmit}>
-                <div className="grid grid-cols-2 gap-4">
-                  <Input
-                    placeholder={content.contact.form.namePlaceholder}
-                    name="name"
-                    required
-                  />
-                  <Input
-                    placeholder={content.contact.form.phonePlaceholder}
-                    name="phone"
-                    required
-                  />
+              </h3>
+              <div className="space-y-4">
+                <div className="flex items-center gap-3">
+                  <Phone className="w-5 h-5 text-primary" />
+                  <div>
+                    <p className="text-gray-600">{content.contact.phone}</p>
+                  </div>
                 </div>
-                <Input
-                  placeholder={content.contact.form.emailPlaceholder}
-                  type="email"
-                  name="email"
-                  required
-                />
-                <div className="grid grid-cols-2 gap-4">
-                  <Input
-                    placeholder={content.contact.form.datePlaceholder}
-                    type="date"
-                    name="date"
-                    required
-                  />
-                  <Input
-                    placeholder={content.contact.form.timePlaceholder}
-                    type="time"
-                    name="time"
-                    required
-                  />
+
+                <div className="flex items-center gap-3">
+                  <Mail className="w-5 h-5 text-primary" />
+                  <div>
+                    <p className="text-gray-600">{content.contact.email}</p>
+                  </div>
                 </div>
-                <Textarea
-                  placeholder={content.contact.form.detailsPlaceholder}
-                  name="projectDetail"
-                  required
-                />
-                <div className="flex items-center space-x-2">
-                  <Checkbox id="privacy" name="privacyAccepted" required />
-                  <label htmlFor="privacy" className="text-sm">
-                    {content.contact.form.privacyLabel}
-                  </label>
+                <div className="flex items-start gap-3">
+                  <MapPin className="w-5 h-5 text-primary mt-1" />
+                  <div>
+                    <p className="text-gray-600">{content.contact.address1}</p>
+                    <p className="text-gray-600">{content.contact.address2}</p>
+                  </div>
                 </div>
-                <Button
-                  className="w-full"
-                  type="submit"
-                  disabled={isSubmitting}
-                >
-                  {isSubmitting
-                    ? content.contact.form.submittingButton
-                    : content.contact.form.submitButton}
-                </Button>
-              </form>
+
+                {/* Google Maps Placeholder */}
+                <div className="w-full h-64 bg-gray-100 rounded-lg flex items-center justify-center">
+                  <p className="text-gray-500">Google Maps Widget</p>
+                </div>
+              </div>
+            </div>
+
+            {/* Second Card - Widget Placeholder 1 */}
+            <div className="bg-white p-6 rounded-lg shadow-sm">
+              <div className="w-full h-[580px] bg-gray-100 rounded-lg flex items-center justify-center">
+                <p className="text-gray-500">Znanylekarz Widget</p>
+              </div>
+            </div>
+
+            {/* Third Card - Widget Placeholder 2 */}
+            <div className="bg-white p-6 rounded-lg shadow-sm">
+              <div className="w-full h-[580px] bg-gray-100 rounded-lg flex items-center justify-center">
+                <p className="text-gray-500">Booksy Widget</p>
+              </div>
             </div>
           </div>
         </div>
       </section>
-
-      <Dialog open={dialogOpen} onOpenChange={setDialogOpen}>
-        <DialogContent>
-          <DialogHeader>
-            <DialogTitle>{content.contact.form.successTitle}</DialogTitle>
-            <DialogDescription>
-              {dialogMessage || content.contact.form.successMessage}
-            </DialogDescription>
-          </DialogHeader>
-        </DialogContent>
-      </Dialog>
     </div>
   );
 }
