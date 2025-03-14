@@ -3,25 +3,10 @@
 import type React from "react";
 
 import Link from "next/link";
-import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
-import { Input } from "@/components/ui/input";
-import { Textarea } from "@/components/ui/textarea";
-import { Checkbox } from "@/components/ui/checkbox";
 import { Mail, MapPin, Phone, Star } from "lucide-react";
-import { submitContactForm } from "./actions";
-import { useState } from "react";
-import { ToastAction } from "@/components/ui/toast";
-import {
-  Dialog,
-  DialogContent,
-  DialogHeader,
-  DialogTitle,
-  DialogDescription,
-} from "@/components/ui/dialog";
 import { useContent } from "./hooks/useContent";
 import { ImageComponent } from "./components/image-component";
-import { useToast } from "@/hooks/use-toast";
 import { KontaktLink } from "./components/Navigation";
 import { usePathname } from "next/navigation";
 import CountUp from "react-countup";
@@ -35,67 +20,7 @@ import {
 
 export default function Home() {
   const { content } = useContent("pl");
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const [dialogOpen, setDialogOpen] = useState(false);
-  const [dialogMessage, setDialogMessage] = useState("");
-  const { toast } = useToast();
   const pathname = usePathname();
-
-  const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
-    event.preventDefault();
-    setIsSubmitting(true);
-
-    try {
-      const form = event.currentTarget;
-      const formData = new FormData(form);
-      console.log("Form data before submission:", Object.fromEntries(formData));
-
-      const result = await submitContactForm(formData);
-      console.log("Form submission result:", result);
-
-      if (result.success) {
-        setDialogMessage(result.message ?? "");
-        setDialogOpen(true);
-        form.reset();
-      } else {
-        toast({
-          title: "Błąd",
-          description: result.message || "Wystąpił błąd. Spróbuj ponownie.",
-          variant: "destructive",
-          action: (
-            <ToastAction altText="Spróbuj ponownie">
-              Spróbuj ponownie
-            </ToastAction>
-          ),
-        });
-        console.error(
-          "Form submission error:",
-          result.errors || result.message
-        );
-      }
-    } catch (error) {
-      console.error("Error in handleSubmit:", error);
-
-      if (error instanceof Error) {
-        console.error("Error name:", error.name);
-        console.error("Error message:", error.message);
-        console.error("Error stack:", error.stack);
-      } else {
-        console.error("Unknown error type:", typeof error);
-      }
-
-      toast({
-        title: "Błąd",
-        description: "Wystąpił nieoczekiwany błąd. Spróbuj ponownie później.",
-        variant: "destructive",
-        action: (
-          <ToastAction altText="Spróbuj ponownie">Spróbuj ponownie</ToastAction>
-        ),
-      });
-    } finally {
-      setIsSubmitting(false);
-    }
-  };
 
   return (
     <div className="min-h-screen">
